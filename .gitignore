@@ -1,17 +1,7 @@
-##########################
-#Linux Specific GitIgnore#
-##########################
-.*
-!.gitignore
-*~
-*.sw[a-p]
- 
-# KDE
-.directory
- 
 ############################
 #Eclipse Specific GitIgnore#
 ############################
+*.pyc
 *.pydevproject
 .project
 .metadata
