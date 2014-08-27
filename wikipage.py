@@ -10,13 +10,13 @@ class WikiPage(object):
     url = ""
     name = ""
     def __init__(self, name):
-        self.name = name.replace(" ", "_")
-        self.url = "http://en.wikipedia.org/wiki/{}".format(self.name)
+        self.name = name
+        self.url = "http://en.wikipedia.org/wiki/{}".format(self.name.replace(" ", "_"))
         self.get_links(self.url)
     def get_links(self, url):
-	"""
-	Scrapes Wiki page for links contained
-	"""
+        """
+	    Scrapes Wiki page for links contained
+	    """
         link_dic = {}
         response = urllib2.urlopen(url)
         soup = BeautifulSoup(response.read())
